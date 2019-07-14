@@ -8,7 +8,7 @@ https://github.com/cncf/curriculum
 | Domain                                   | Weight(%) |
 |:---------------------------------------- |:---------:|
 | [Scheduling][1]                          | 5         |
-| Logging/Monitoring[2]                    | 5         |
+| [Logging/Monitoring][2]                  | 5         |
 | Application Lifecycle Management         | 8         |
 | Cluster Maintenance                      | 11        |
 | Security                                 | 12        |
