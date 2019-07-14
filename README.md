@@ -19,4 +19,4 @@ https://github.com/cncf/curriculum
 | Installation, Configuration & Validation | 12        |
 
 [1]: scheduling.md
-[2]: logging-monitoring.ms
+[2]: logging-monitoring.md
