@@ -7,7 +7,7 @@ https://github.com/cncf/curriculum
 
 | Domain                                   | Weight(%) |
 |:---------------------------------------- |:---------:|
-| Scheduling                               | 5         |
+| [Scheduling][1]                          | 5         |
 | Logging/Monitoring                       | 5         |
 | Application Lifecycle Management         | 8         |
 | Cluster Maintenance                      | 11        |
@@ -17,3 +17,5 @@ https://github.com/cncf/curriculum
 | Core Concepts                            | 19        |
 | Networking                               | 11        |
 | Installation, Configuration & Validation | 12        |
+
+[1]: scheduling.md
