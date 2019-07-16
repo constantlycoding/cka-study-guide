@@ -17,7 +17,8 @@ k get po mysql -ojson | jq -r '.spec.containers[0].ports'
 k describe svc web-service | grep Selector
 k get po webapp -ojson | jq -r '.metadata.labels.'
 ```
-Check pod status and number of restarts
+Check pod status, number of restarts
+Check credentials, username/password
 ```
 k get po
 ```
