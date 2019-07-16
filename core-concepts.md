@@ -39,14 +39,14 @@ spec:
 k get quota -n dev
 ```
 # Understand the Kubernetes cluster architecture
-| Component       | Responsibility                                                                     | Port |
-| --------------- | ---------------------------------------------------------------------------------- | --- |
-| etcd            | store cluster information                                                          | 2379 |
-| kube-api        | authenticate/validate request, retrieve/update etcd                                |
-| kube-controller | monitor state of various components, work towards bringing system to desired state |
-| kube-scheduler  | decide which pod goes to which node, filter/rank nodes                             |
-| kubelet         | register node, create pods as instructed by kube-scheduler, monitor node and pods  |
-| kube-proxy      | create rules on each node to forward traffic to services to backend pods           |
+| Component       | Responsibility                                                                     | Node   |Port |
+| --------------- | ---------------------------------------------------------------------------------- | ------ |--- |
+| etcd            | store cluster information                                                          | master | 2379 |
+| kube-api        | authenticate/validate request, retrieve/update etcd                                | master |
+| kube-controller | monitor state of various components, work towards bringing system to desired state | master |
+| kube-scheduler  | decide which pod goes to which node, filter/rank nodes                             | master |
+| kubelet         | register node, create pods as instructed by kube-scheduler, monitor node and pods  | worker |
+| kube-proxy      | create rules on each node to forward traffic to services to backend pods           | worker |
 # Understand Services and other network primitives
 ClusterIP
 ```
