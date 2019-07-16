@@ -18,7 +18,7 @@ namespace
 ```
 k create ns dev
 k config set-context --current --namespace=dev
-k get sa default -ojsonpath='{.metadata.namespace}{"\n"}'
+k get sa default -ojson | jq -r '.metadata.namespace'
 ```
 resource quota
 ```
