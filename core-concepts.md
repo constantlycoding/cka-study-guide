@@ -42,7 +42,7 @@ k get quota -n dev
 | Component       | Responsibility                                                                     | Node   |Port |
 | --------------- | ---------------------------------------------------------------------------------- | ------ |--- |
 | etcd            | store cluster information                                                          | master | 2379 |
-| kube-api        | authenticate/validate request, retrieve/update etcd                                | master |
+| kube-apiserver  | authenticate/validate request, retrieve/update etcd                                | master |
 | kube-controller | monitor state of various components, work towards bringing system to desired state | master |
 | kube-scheduler  | decide which pod goes to which node, filter/rank nodes                             | master |
 | kubelet         | register node, create pods as instructed by kube-scheduler, monitor node and pods  | worker |
