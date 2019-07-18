@@ -12,7 +12,7 @@ Servers
 
 | Component      | Node   | Keys                               | hosts |
 |:-------------- |:------ |:---------------------------------- |:----- |
-| kube-apiserver | master | apiserver-key.pem, apiserver.pem   | hostname, Host_IP, advertise_IP, kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster, kubernetes.default.svc.cluster.local   |
+| kube-apiserver | master | apiserver-key.pem, apiserver.pem   | *hostname*, *Host_IP*, *advertise_IP*, kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster, kubernetes.default.svc.cluster.local   |
 | etcd           | master | etcdserver-key.pem, etcdserver.pem |       |
 | kubelet        | worker | kubelet-key.pem, kubelet.pem       |       |
 
@@ -26,7 +26,7 @@ Clients
 | kube-apiserver  | master | apiserver-etcd-key.pem, apiserver-etcd.pem       |                                |                | etcd             |
 | kube-apiserver  | master | apiserver-kubelet-key.pem, apiserver-kubelet.pem |                                |                | kubelet   |
 | kube-proxy      | worker | proxy-key.pem, proxy.pem                         |                                |                | kube-apiserver |
-| kubelet         | worker | kubelet-apiserver-key.pem, kubelet-apiserver.pem | system:node:<nodeName>         | system:nodes   | kube-apiserver |
+| kubelet         | worker | kubelet-apiserver-key.pem, kubelet-apiserver.pem | system:node:*nodeName*         | system:nodes   | kube-apiserver |
 
 # Work with images securely
 # Define security contexts
