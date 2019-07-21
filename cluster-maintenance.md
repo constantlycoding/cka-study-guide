@@ -35,3 +35,33 @@ k uncordon node01
 ```
 # Facilitate operating system upgrades
 # Implement backup and restore methodologies
+Resource configuration
+```
+k get all --all-namespaces -oyaml > all-deploy-services.yaml
+```
+etcd
+```
+ETCDCTL_API=3 etcdctl version
+
+ETCDCTL_API=3 etcdctl snapshot save /tmp/snapshot-pre-boot.db \
+  --endpoints=https://[127.0.0.1]:2379 \
+  --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+  --cert=/etc/kubernetes/pki/etcd/server.crt \
+  --key=/etc/kubernetes/pki/etcd/server.key
+
+ETCDCTL_API=3 etcdctl snapshot status /tmp/snapshot-pre-boot.db \
+  --write-out=table
+
+ETCDCTL_API=3 etcdctl snapshot restore /tmp/snapshot-pre-boot.db \
+  --endpoints=https://[127.0.0.1]:2379 \
+  --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+  --name=master \
+  --cert=/etc/kubernetes/pki/etcd/server.crt \
+  --key=/etc/kubernetes/pki/etcd/server.key \
+  --data-dir /var/lib/etcd-from-backup \
+  --initial-cluster=master=https://127.0.0.1:2380 \
+  --initial-cluster-token etcd-cluster-1 \
+  --initial-advertise-peer-urls=https://127.0.0.1:2380   
+```
+restart etcd with correct `data-dir` and `initial-cluster-token` and volumemounts
+
