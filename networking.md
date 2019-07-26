@@ -47,6 +47,12 @@ ping 10-32-0-2.default.pod.cluster.local
 k run -it busybox --image=busybox --restart=Never -- sh
 cat /etc/resolv.conf
 ```
+```
+cat /var/lib/kubelet/config.yaml | head -20
+```
+```
+k get cm coredns -nkube-system --export -oyaml
+```
 # Understand CNI
 ```
 ps -fC kubelet | grep cni
