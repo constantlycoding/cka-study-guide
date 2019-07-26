@@ -29,6 +29,25 @@ ps -fC kube-apiserver | grep service-cluster-ip-range
 ```
 # Deploy and configure network load balancer
 Deployment, Service, ConfigMap, Auth
+```
+k create ns ingress-space
+
+k config current-context
+k config set-context kubernetes-admin@kubernetes --namespace=ingress-space
+
+k create cm nginx-configuration
+k create sa ingress-serviceaccount
+
+ingress-role
+ingress-rolebinding
+ingress-controller
+
+k expose deploy ingress-controller --type=NodePort --port=80 --name=ingress --dry-run -oyaml > ingress.yaml
+vim ingress-service.yaml # add nodePort
+k create -f ingress-service.yaml
+
+k create -f ingress.yaml # in app-space
+```
 # Know how to use Ingress rules
 Route to single application: ww<span>w.example.com
 ```
