@@ -28,7 +28,59 @@ IP range of svc
 ps -fC kube-apiserver | grep service-cluster-ip-range
 ```
 # Deploy and configure network load balancer
+Deployment, Service, ConfigMap, Auth
 # Know how to use Ingress rules
+Route to single application: ww<span>w.example.com
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-wear
+spec:
+  backend:
+    serviceName: wear-service
+    servicePort: 80
+```
+Route based on url: ww<span>w.example.com/watch ww<span>w.example.com/watch
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-wear-watch
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /wear
+        backend:
+          serviceName: wear-service
+          servicePort: 80
+      - path: /watch
+        backend:
+          serviceName: watch-service
+          servicePort: 80
+```
+Route based on domain name: wear.example.com, watch.example.com
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-wear-watch
+spec:
+  rules:
+  - host: wear.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: wear-service
+          servicePort: 80
+  - host: watch.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: watch-service
+          servicePort: 80
+```
 # Know how to configure and use the cluster DNS
 ```
 k run nginx --image=nginx --restart=Never
