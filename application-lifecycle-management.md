@@ -32,5 +32,96 @@ Rollback
 k rollout undo deploy nginx
 ```
 # Know various ways to configure applications
+Command and Arguments on applications
+* Docker `CMD` will be replaced by command line parameters
+* Docker `ENTRYPOINT` will be prepended to command line parameters
+* Docker `CMD` will be appended to `ENTRYPOINT`
+* Docker default `CMD` will be replaced by command line parameters
+* Docker `ENTRYPOINT` can be replaced with `--entrypoint` option
+* Pod definition `args` overwrites DockerFile `CMD`
+* Pod definition `command` overwrites DockerFile `ENTRYPOINT`
+```
+k get po ubuntu-sleeper -ojson | jq -r '.spec.containers[0].command'
+k get po ubuntu-sleeper -ojson | jq -r '.spec.containers[0].args'
+```
+Environment Variables
+```
+k get po ubuntu-sleeper -ojson | jq -r '.spec.containers[0].env'
+```
+```
+env
+- name: APP_COLOUR
+  value: PINK
+```
+```
+env
+- name: APP_COLOUR
+  valueFrom:
+    configMapKeyRef:
+```
+```
+env
+- name: APP_COLOUR
+  valueFrom:
+    secretMapKeyRef:
+```
+ConfigMaps
+```
+k create cm app-config --from-literal=APP_COLOUR=BLUE
+k create cm app-config --from-literal=APP_COLOUR=BLUE --from-literal=APP_MOD=prod
+k create cm app-config --from-file=app.config
+```
+```
+envFrom
+- configMapRef:
+    name: app-config
+```
+```
+env
+- name: APP_COLOUR
+  valueFrom:
+    configMapKeyRef:
+      name: app-config
+      key: APP_COLOUR
+```
+```
+volumes
+- name: app-volume
+  configMap:
+      name: app-config
+```
+Secrets
+```
+k create secret generic app-secret --from-literal=DB_HOST=mysql
+k create secret generic app-secret --from-literal=DB_HOST=mysql --from-literal=DB_USER=root
+k create secret generic app-secret --from-file=app.secret
+```
+```
+envFrom
+- secretRef:
+    name: app-secret
+```
+```
+env
+- name: DB_HOST
+  valueFrom:
+    secretKeyRef:
+      name: app-secret
+      key: DB_HOST
+```
+```
+volumes
+- name: app-volume
+  secret:
+      secretName: app-secret
+```
+Encode
+```
+echo -n 'mysql' | base64
+```
+Decode
+```
+echo -n 'bXIzcWw=' | base64 --decode
+```
 # Know how to scale applications
 # Understand the primitives necessary to create a self-healing application
