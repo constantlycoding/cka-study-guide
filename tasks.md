@@ -1,6 +1,6 @@
 # Assign Memory/CPU Resources to Containers and Pods
 ```
-k run nginx --image=nginx --restart=Never --requests='cpu=100m,memory=256Mi' --limits='cpu=200m,memory=512Mi'
+k run nginx --image=nginx --restart=Never --requests=cpu=100m,memory=256Mi --limits=cpu=200m,memory=512Mi
 ```
 # Configure a Pod to Use a Volume for Storage
 ```
@@ -76,3 +76,30 @@ k run nginx --image=nginx --restart=Never --serviceaccount=myuser
 # Configure Pod Initialization
 # Configure a Pod to Use a ConfigMap
 
+# Configure Default, Minimum and Maximum Memory/CPU Requests and Limits for a Namespace
+```
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: mem-limit-range
+spec:
+  limits:
+  - default:
+      memory: 512Mi
+      cpu: 1
+    defaultRequest:
+      memory: 256Mi
+      cpu: 0.5
+    max:
+      memory: 1Gi
+      cpu: 800m
+    min:
+      memory: 500Mi
+      cpu: 200m
+    type: Container
+```
+# Configure Memory, CPU and Pod Quotas for a Namespace
+```
+k create quota my-quota --hard=cpu=1,memory=1G,pods=2
+```
+# Access Clusters Using the Kubernetes API
