@@ -1,24 +1,3 @@
-# Assign Memory/CPU Resources to Containers and Pods
-```
-k run nginx --image=nginx --restart=Never --requests=cpu=100m,memory=256Mi --limits=cpu=200m,memory=512Mi
-```
-# Configure a Pod to Use a Volume for Storage
-```
-apiVersion: v1
-kind: Pod
-metadata:
-  name: redis
-spec:
-  containers:
-  - name: redis
-    image: redis
-    volumeMounts:            # po.spec.containers.volumeMounts
-    - name: redis-storage
-      mountPath: /data/redis
-  volumes:                   # po.spec.volumes
-  - name: redis-storage
-    emptyDir: {}
-```
 # Configure a Pod to Use a PersistentVolume for Storage
 ```
 apiVersion: v1
