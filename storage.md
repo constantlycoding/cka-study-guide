@@ -38,6 +38,7 @@ spec:
 k get pvc
 ```
 # Understand Kubernetes storage objects
+- [Task: Configure a Pod to Use a Volume for Storage](configure-volume-storage.md)
 # Know how to confifigure applications with persistent storage
 ```
 kubectl create -f https://k8s.io/examples/pods/storage/redis.yaml --dry-run -oyaml > po-vol.yaml
