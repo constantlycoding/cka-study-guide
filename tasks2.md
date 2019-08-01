@@ -2,7 +2,7 @@
     - Install and Set Up kubectl /docs/tasks/tools/install-kubectl/
     - Install Minikube /docs/tasks/tools/install-minikube/
 - Configure Pods and Containers
-    - Assign Memory Resources to Containers and Pods /docs/tasks/configure-pod-container/assign-memory-resource/
+    - [Assign Memory Resources to Containers and Pods](scheduling.md#understand-how-resource-limits-can-affect-pod-scheduling)
     - Assign CPU Resources to Containers and Pods /docs/tasks/configure-pod-container/assign-cpu-resource/
     - Configure GMSA for Windows pods and containers /docs/tasks/configure-pod-container/configure-gmsa/
     - Configure Quality of Service for Pods /docs/tasks/configure-pod-container/quality-service-pod/
