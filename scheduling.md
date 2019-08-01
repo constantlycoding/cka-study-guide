@@ -26,6 +26,7 @@ k get ds kube-proxy -nkube-system
 ```
 # Understand how resource limits can affect Pod scheduling
 [Task: Assign Memory Resources to Containers and Pods](assign-memory-resource.md)
+[Task: Assign CPU Resources to Containers and Pods](assign-cpu-resource.md)
 ```
 k apply -f https://k8s.io/examples/admin/resource/memory-defaults.yaml
 k run nginx --image=nginx --restart=Never
