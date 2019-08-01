@@ -7,7 +7,7 @@
     - Configure GMSA for Windows pods and containers /docs/tasks/configure-pod-container/configure-gmsa/
     - Configure Quality of Service for Pods /docs/tasks/configure-pod-container/quality-service-pod/
     - Assign Extended Resources to a Container /docs/tasks/configure-pod-container/extended-resource/
-    - Configure a Pod to Use a Volume for Storage /docs/tasks/configure-pod-container/configure-volume-storage/
+    - [Configure a Pod to Use a Volume for Storage](storage.md#understand-kubernetes-storage-objects)
     - Configure a Pod to Use a PersistentVolume for Storage /docs/tasks/configure-pod-container/configure-persistent-volume-storage/
     - Configure a Pod to Use a Projected Volume for Storage /docs/tasks/configure-pod-container/configure-projected-volume-storage/
     - Configure a Security Context for a Pod or Container /docs/tasks/configure-pod-container/security-context/
