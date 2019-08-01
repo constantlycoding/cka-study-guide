@@ -3,7 +3,7 @@
     - Install Minikube /docs/tasks/tools/install-minikube/
 - Configure Pods and Containers
     - [Assign Memory Resources to Containers and Pods](scheduling.md#understand-how-resource-limits-can-affect-pod-scheduling)
-    - Assign CPU Resources to Containers and Pods /docs/tasks/configure-pod-container/assign-cpu-resource/
+    - [Assign CPU Resources to Containers and Pods](scheduling.md#understand-how-resource-limits-can-affect-pod-scheduling)
     - Configure GMSA for Windows pods and containers /docs/tasks/configure-pod-container/configure-gmsa/
     - Configure Quality of Service for Pods /docs/tasks/configure-pod-container/quality-service-pod/
     - Assign Extended Resources to a Container /docs/tasks/configure-pod-container/extended-resource/
