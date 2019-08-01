@@ -1,0 +1,174 @@
+- Install Tools
+    - Install and Set Up kubectl /docs/tasks/tools/install-kubectl/
+    - Install Minikube /docs/tasks/tools/install-minikube/
+- Configure Pods and Containers
+    - Assign Memory Resources to Containers and Pods /docs/tasks/configure-pod-container/assign-memory-resource/
+    - Assign CPU Resources to Containers and Pods /docs/tasks/configure-pod-container/assign-cpu-resource/
+    - Configure GMSA for Windows pods and containers /docs/tasks/configure-pod-container/configure-gmsa/
+    - Configure Quality of Service for Pods /docs/tasks/configure-pod-container/quality-service-pod/
+    - Assign Extended Resources to a Container /docs/tasks/configure-pod-container/extended-resource/
+    - Configure a Pod to Use a Volume for Storage /docs/tasks/configure-pod-container/configure-volume-storage/
+    - Configure a Pod to Use a PersistentVolume for Storage /docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+    - Configure a Pod to Use a Projected Volume for Storage /docs/tasks/configure-pod-container/configure-projected-volume-storage/
+    - Configure a Security Context for a Pod or Container /docs/tasks/configure-pod-container/security-context/
+    - Configure Service Accounts for Pods /docs/tasks/configure-pod-container/configure-service-account/
+    - Pull an Image from a Private Registry /docs/tasks/configure-pod-container/pull-image-private-registry/
+    - Configure Liveness and Readiness Probes /docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
+    - Assign Pods to Nodes /docs/tasks/configure-pod-container/assign-pods-nodes/
+    - Configure Pod Initialization /docs/tasks/configure-pod-container/configure-pod-initialization/
+    - Attach Handlers to Container Lifecycle Events /docs/tasks/configure-pod-container/attach-handler-lifecycle-event/
+    - Configure a Pod to Use a ConfigMap /docs/tasks/configure-pod-container/configure-pod-configmap/
+    - Share Process Namespace between Containers in a Pod /docs/tasks/configure-pod-container/share-process-namespace/
+    - Translate a Docker Compose File to Kubernetes Resources /docs/tasks/configure-pod-container/translate-compose-kubernetes/
+- Administer a Cluster
+    - Administration with kubeadm
+        - Certificate Management with kubeadm /docs/tasks/administer-cluster/kubeadm/kubeadm-certs/
+        - Upgrading kubeadm HA clusters from v1.12 to v1.13 /docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade-ha-1-13/
+        - Upgrading kubeadm clusters from v1.12 to v1.13 /docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade-1-13/
+        - Upgrading kubeadm clusters from v1.13 to v1.14 /docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade-1-14/
+        - Upgrading kubeadm clusters from v1.14 to v1.15 /docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade-1-15/
+    - Manage Memory, CPU, and API Resources
+        - Configure Default Memory Requests and Limits for a Namespace /docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
+        - Configure Default CPU Requests and Limits for a Namespace /docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
+        - Configure Minimum and Maximum Memory Constraints for a Namespace /docs/tasks/administer-cluster/manage-resources/memory-constraint-namespace/
+        - Configure Minimum and Maximum CPU Constraints for a Namespace /docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/
+        - Configure Memory and CPU Quotas for a Namespace /docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/
+        - Configure a Pod Quota for a Namespace /docs/tasks/administer-cluster/manage-resources/quota-pod-namespace/
+    - Install a Network Policy Provider
+        - Use Calico for NetworkPolicy /docs/tasks/administer-cluster/network-policy-provider/calico-network-policy/
+        - Use Cilium for NetworkPolicy /docs/tasks/administer-cluster/network-policy-provider/cilium-network-policy/
+        - Use Kube-router for NetworkPolicy /docs/tasks/administer-cluster/network-policy-provider/kube-router-network-policy/
+        - Romana for NetworkPolicy /docs/tasks/administer-cluster/network-policy-provider/romana-network-policy/
+        - Weave Net for NetworkPolicy /docs/tasks/administer-cluster/network-policy-provider/weave-network-policy/
+    - Access Clusters Using the Kubernetes API /docs/tasks/administer-cluster/access-cluster-api/
+    - Access Services Running on Clusters /docs/tasks/administer-cluster/access-cluster-services/
+    - Advertise Extended Resources for a Node /docs/tasks/administer-cluster/extended-resource-node/
+    - Autoscale the DNS Service in a Cluster /docs/tasks/administer-cluster/dns-horizontal-autoscaling/
+    - Change the Reclaim Policy of a PersistentVolume /docs/tasks/administer-cluster/change-pv-reclaim-policy/
+    - Change the default StorageClass /docs/tasks/administer-cluster/change-default-storage-class/
+    - Cluster Management /docs/tasks/administer-cluster/cluster-management/
+    - Configure Multiple Schedulers /docs/tasks/administer-cluster/configure-multiple-schedulers/
+    - Configure Out Of Resource Handling /docs/tasks/administer-cluster/out-of-resource/
+    - Configure Quotas for API Objects /docs/tasks/administer-cluster/quota-api-object/
+    - Control CPU Management Policies on the Node /docs/tasks/administer-cluster/cpu-management-policies/
+    - Customizing DNS Service /docs/tasks/administer-cluster/dns-custom-nameservers/
+    - Debugging DNS Resolution /docs/tasks/administer-cluster/dns-debugging-resolution/
+    - Declare Network Policy /docs/tasks/administer-cluster/declare-network-policy/
+    - Developing Cloud Controller Manager /docs/tasks/administer-cluster/developing-cloud-controller-manager/
+    - Encrypting Secret Data at Rest /docs/tasks/administer-cluster/encrypt-data/
+    - Guaranteed Scheduling For Critical Add-On Pods /docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/
+    - IP Masquerade Agent User Guide /docs/tasks/administer-cluster/ip-masq-agent/
+    - Kubernetes Cloud Controller Manager /docs/tasks/administer-cluster/running-cloud-controller/
+    - Limit Storage Consumption /docs/tasks/administer-cluster/limit-storage-consumption/
+    - Namespaces Walkthrough /docs/tasks/administer-cluster/namespaces-walkthrough/
+    - Operating etcd clusters for Kubernetes /docs/tasks/administer-cluster/configure-upgrade-etcd/
+    - Reconfigure a Node's Kubelet in a Live Cluster /docs/tasks/administer-cluster/reconfigure-kubelet/
+    - Reserve Compute Resources for System Daemons /docs/tasks/administer-cluster/reserve-compute-resources/
+    - Safely Drain a Node while Respecting the PodDisruptionBudget /docs/tasks/administer-cluster/safely-drain-node/
+    - Securing a Cluster /docs/tasks/administer-cluster/securing-a-cluster/
+    - Set Kubelet parameters via a config file /docs/tasks/administer-cluster/kubelet-config-file/
+    - Set up High-Availability Kubernetes Masters /docs/tasks/administer-cluster/highly-available-master/
+    - Share a Cluster with Namespaces /docs/tasks/administer-cluster/namespaces/
+    - Static Pods /docs/tasks/administer-cluster/static-pod/
+    - Using CoreDNS for Service Discovery /docs/tasks/administer-cluster/coredns/
+    - Using NodeLocal DNSCache in Kubernetes clusters /docs/tasks/administer-cluster/nodelocaldns/
+    - Using a KMS provider for data encryption /docs/tasks/administer-cluster/kms-provider/
+    - Using sysctls in a Kubernetes Cluster /docs/tasks/administer-cluster/sysctl-cluster/
+- Manage Kubernetes Objects
+    - Declarative Management of Kubernetes Objects Using Configuration Files /docs/tasks/manage-kubernetes-objects/declarative-config/
+    - Declarative Management of Kubernetes Objects Using Kustomize /docs/tasks/manage-kubernetes-objects/kustomization/
+    - Managing Kubernetes Objects Using Imperative Commands /docs/tasks/manage-kubernetes-objects/imperative-command/
+    - Imperative Management of Kubernetes Objects Using Configuration Files /docs/tasks/manage-kubernetes-objects/imperative-config/
+- Inject Data Into Applications
+    - Define a Command and Arguments for a Container /docs/tasks/inject-data-application/define-command-argument-container/
+    - Define Environment Variables for a Container /docs/tasks/inject-data-application/define-environment-variable-container/
+    - Expose Pod Information to Containers Through Environment Variables /docs/tasks/inject-data-application/environment-variable-expose-pod-information/
+    - Expose Pod Information to Containers Through Files /docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/
+    - Distribute Credentials Securely Using Secrets /docs/tasks/inject-data-application/distribute-credentials-secure/
+    - Inject Information into Pods Using a PodPreset /docs/tasks/inject-data-application/podpreset/
+- Run Applications
+    - Run a Stateless Application Using a Deployment /docs/tasks/run-application/run-stateless-application-deployment/
+    - Run a Single-Instance Stateful Application /docs/tasks/run-application/run-single-instance-stateful-application/
+    - Run a Replicated Stateful Application /docs/tasks/run-application/run-replicated-stateful-application/
+    - Update API Objects in Place Using kubectl patch /docs/tasks/run-application/update-api-object-kubectl-patch/
+    - Scale a StatefulSet /docs/tasks/run-application/scale-stateful-set/
+    - Delete a StatefulSet /docs/tasks/run-application/delete-stateful-set/
+    - Force Delete StatefulSet Pods /docs/tasks/run-application/force-delete-stateful-set-pod/
+    - Perform Rolling Update Using a Replication Controller /docs/tasks/run-application/rolling-update-replication-controller/
+    - Horizontal Pod Autoscaler /docs/tasks/run-application/horizontal-pod-autoscale/
+    - Horizontal Pod Autoscaler Walkthrough /docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+    - Specifying a Disruption Budget for your Application /docs/tasks/run-application/configure-pdb/
+- Run Jobs
+    - Running Automated Tasks with a CronJob /docs/tasks/job/automated-tasks-with-cron-jobs/
+    - Parallel Processing using Expansions /docs/tasks/job/parallel-processing-expansion/
+    - Coarse Parallel Processing Using a Work Queue /docs/tasks/job/coarse-parallel-processing-work-queue/
+    - Fine Parallel Processing Using a Work Queue /docs/tasks/job/fine-parallel-processing-work-queue/
+- Access Applications in a Cluster
+    - Web UI (Dashboard) /docs/tasks/access-application-cluster/web-ui-dashboard/
+    - Accessing Clusters /docs/tasks/access-application-cluster/access-cluster/
+    - Configure Access to Multiple Clusters /docs/tasks/access-application-cluster/configure-access-multiple-clusters/
+    - Use Port Forwarding to Access Applications in a Cluster /docs/tasks/access-application-cluster/port-forward-access-application-cluster/
+    - Use a Service to Access an Application in a Cluster /docs/tasks/access-application-cluster/service-access-application-cluster/
+    - Connect a Front End to a Back End Using a Service /docs/tasks/access-application-cluster/connecting-frontend-backend/
+    - Create an External Load Balancer /docs/tasks/access-application-cluster/create-external-load-balancer/
+    - Configure Your Cloud Provider's Firewalls /docs/tasks/access-application-cluster/configure-cloud-provider-firewall/
+    - List All Container Images Running in a Cluster /docs/tasks/access-application-cluster/list-all-running-container-images/
+    - Set up Ingress on Minikube with the NGINX Ingress Controller /docs/tasks/access-application-cluster/ingress-minikube/
+    - Communicate Between Containers in the Same Pod Using a Shared Volume /docs/tasks/access-application-cluster/communicate-containers-same-pod-shared-volume/
+    - Configure DNS for a Cluster /docs/tasks/access-application-cluster/configure-dns-cluster/
+- Monitoring, Logging, and Debugging
+    - Application Introspection and Debugging /docs/tasks/debug-application-cluster/debug-application-introspection/
+    - Auditing /docs/tasks/debug-application-cluster/audit/
+    - Debug Init Containers /docs/tasks/debug-application-cluster/debug-init-containers/
+    - Debug Pods and ReplicationControllers /docs/tasks/debug-application-cluster/debug-pod-replication-controller/
+    - Debug Services /docs/tasks/debug-application-cluster/debug-service/
+    - Debug a StatefulSet /docs/tasks/debug-application-cluster/debug-stateful-set/
+    - Debugging Kubernetes nodes with crictl /docs/tasks/debug-application-cluster/crictl/
+    - Determine the Reason for Pod Failure /docs/tasks/debug-application-cluster/determine-reason-pod-failure/
+    - Developing and debugging services locally /docs/tasks/debug-application-cluster/local-debugging/
+    - Events in Stackdriver /docs/tasks/debug-application-cluster/events-stackdriver/
+    - Get a Shell to a Running Container /docs/tasks/debug-application-cluster/get-shell-running-container/
+    - Logging Using Elasticsearch and Kibana /docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
+    - Logging Using Stackdriver /docs/tasks/debug-application-cluster/logging-stackdriver/
+    - Monitor Node Health /docs/tasks/debug-application-cluster/monitor-node-health/
+    - Resource metrics pipeline /docs/tasks/debug-application-cluster/resource-metrics-pipeline/
+    - Tools for Monitoring Resources /docs/tasks/debug-application-cluster/resource-usage-monitoring/
+    - Troubleshoot Applications /docs/tasks/debug-application-cluster/debug-application/
+    - Troubleshoot Clusters /docs/tasks/debug-application-cluster/debug-cluster/
+    - Troubleshooting /docs/tasks/debug-application-cluster/troubleshooting/
+- Extend Kubernetes
+    - Use Custom Resources
+        - Extend the Kubernetes API with CustomResourceDefinitions /docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
+        - Versions of CustomResourceDefinitions /docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definition-versioning/
+    - Configure the Aggregation Layer /docs/tasks/access-kubernetes-api/configure-aggregation-layer/
+    - Setup an Extension API Server /docs/tasks/access-kubernetes-api/setup-extension-api-server/
+    - Use an HTTP Proxy to Access the Kubernetes API /docs/tasks/access-kubernetes-api/http-proxy-access-api/
+- TLS
+    - Certificate Rotation /docs/tasks/tls/certificate-rotation/
+    - Manage TLS Certificates in a Cluster /docs/tasks/tls/managing-tls-in-a-cluster/
+- Federation
+    - Set up Cluster Federation with Kubefed /docs/tasks/federation/set-up-cluster-federation-kubefed/
+    - Set up CoreDNS as DNS provider for Cluster Federation /docs/tasks/federation/set-up-coredns-provider-federation/
+    - Set up placement policies in Federation /docs/tasks/federation/set-up-placement-policies-federation/
+    - Cross-cluster Service Discovery using Federated Services /docs/tasks/federation/federation-service-discovery/
+    - Administer Federation Control Plane
+        - Federated Cluster /docs/tasks/federation/administer-federation/cluster/
+        - Federated ConfigMap /docs/tasks/federation/administer-federation/configmap/
+        - Federated DaemonSet /docs/tasks/federation/administer-federation/daemonset/
+        - Federated Deployment /docs/tasks/federation/administer-federation/deployment/
+        - Federated Events /docs/tasks/federation/administer-federation/events/
+        - Federated Horizontal Pod Autoscalers (HPA) /docs/tasks/federation/administer-federation/hpa/
+        - Federated Ingress /docs/tasks/federation/administer-federation/ingress/
+        - Federated Jobs /docs/tasks/federation/administer-federation/job/
+        - Federated Namespaces /docs/tasks/federation/administer-federation/namespaces/
+        - Federated ReplicaSets /docs/tasks/federation/administer-federation/replicaset/
+        - Federated Secrets /docs/tasks/federation/administer-federation/secret/
+- Manage Cluster Daemons
+    - Perform a Rolling Update on a DaemonSet /docs/tasks/manage-daemon/update-daemon-set/
+    - Perform a Rollback on a DaemonSet /docs/tasks/manage-daemon/rollback-daemon-set/
+- Install Service Catalog
+    - Install Service Catalog using Helm /docs/tasks/service-catalog/install-service-catalog-using-helm/
+    - Install Service Catalog using SC /docs/tasks/service-catalog/install-service-catalog-using-sc/
+- Extend kubectl with plugins
+- Manage HugePages
+- Schedule GPUs
